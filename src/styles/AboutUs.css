@@ -1,0 +1,89 @@
+#aboutUsSection {
+    margin: 15vh auto;
+    flex-direction: column;
+    width: 60%;
+    height: fit-content;
+    justify-content: space-around;
+}   
+
+.aboutUsImage {
+    width: 50vh;
+    height: 50vh;
+    font-size: 175pt;
+    border-radius: 4vh;
+    background-color: var(--accentColor2);  
+}   
+
+.aboutUsContent {
+    position: relative;
+    overflow: hidden;
+
+    flex-direction: column;
+    
+    max-height: 50vh;
+    width: 40%;
+    
+    border-radius: 4vh;
+    
+    padding: 20vw 3vw;
+    
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0.5vh 0;
+    }
+    
+    h1 {
+        font-weight: 900;
+    }
+    
+    ul {
+        list-style-position: inside;
+    }
+    
+    ul li {
+        margin: 1vh 0;
+    }
+}
+
+.aboutUsContent::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, var(--accentColor) 10%, var(--accentColor2));
+    mask-image: url('../additional-stuff/Snake-Pattern.svg');
+    mask-size: 1000%;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.aboutUsContent:nth-of-type(2)::before {
+    background: linear-gradient(to right, var(--accentColor2) 10%, var(--accentColor));
+    mask-image: url('../additional-stuff/Circle-Pattern.svg');
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: 250%;
+}
+
+.aboutUsFlexElement:nth-of-type(3) .aboutUsContent::before {
+    mask-size: 200%;
+    background: linear-gradient(to right, var(--accentColor) 25%, var(--accentColor2));
+}
+
+.aboutUsFlexElement {
+    height: 60vh;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 40vh 0;
+}
+
+.verticalSeparator {
+    width: .25%;
+    height: 45vh;
+    border-radius: 5vh;
+    background: rgba(0, 0, 0, 0.5);
+}

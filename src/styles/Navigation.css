@@ -1,0 +1,119 @@
+:root {
+    --accentColor: #A900FF;
+    --accentColor2: #715bf0;
+  }
+  
+@property --gradStart {
+  syntax: '<color>';
+  initial-value: #A900FF;
+  inherits: false;
+}
+
+@property --gradEnd {
+  syntax: '<color>';
+  initial-value: #A900FF;
+  inherits: false;
+}
+
+
+
+/* ! Unique Elements */
+
+.spacer {
+    flex-grow: 1;
+  }  
+
+#navPan {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 9vh;
+  
+  background-color: rgb(27, 27, 27);
+  color: white;
+
+  z-index: 1000;
+  
+  #icon-wrapper {
+    margin-left: 10vw;
+    cursor: default;
+  }
+  
+  #contactButton {
+    margin-right: 10vw;
+    margin-left: 0.5vw;
+  }
+}
+
+.navBtn {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+
+    padding: 1.5vh 1.5vw;
+    margin: 0 0.5vw;
+
+    cursor: pointer;
+}
+
+.navBtn span {
+  position: relative;
+}
+
+.navBtn::before {
+  transition: width .35s cubic-bezier(1, 0, 0, 1);
+  transform-origin: flexCenter left;
+
+  position: absolute;
+  top: 85%;
+  bottom: 0;
+  left: 10%;
+  right: 0;
+
+  content: "";
+
+  background-color: #ffffff;
+
+  width: 0%;
+  height: 2%;
+
+  border-radius: 2vh;
+  /* transform: scale(0); */
+}
+
+.navBtn:hover::before {
+  /* transform: scale(1); */
+  width: 80%;
+}
+
+#contactButton {
+  transition: --gradStart 0.5s cubic-bezier(1,-0.03,.11,.98), 
+              --gradEnd 0.5s cubic-bezier(1,-0.03,.11,.98),
+              all .5s cubic-bezier(1, 0, 0, 1);
+
+  background: linear-gradient(to right, var(--gradStart), var(--gradEnd));
+
+  padding: 1.5vh 1.5vw;
+
+  font-weight: 900;
+
+  border-radius: 2vh;
+
+  position: relative;
+  overflow: hidden;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+#contactButton:hover {
+  --gradEnd: var(--accentColor2);
+  letter-spacing: 0.25vh;
+}
+
+#icon-wrapper {
+  width: 12vh;
+  padding-bottom: 0.5vh;
+}

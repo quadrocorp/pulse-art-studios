@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input {
+  border: 0;
+  outline: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+}
+
+* {
+  font-family: Outfit;
+  transition: all 1s cubic-bezier(1, 0, 0, 1);
+  font-weight: 300;
+}
+
+b {
+  font-weight: 500;
+}
+
+
+
+/* @font-face {
+  font-family: Outfit;
+  src: url(%PUBLIC_URL%);
+} */

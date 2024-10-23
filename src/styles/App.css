@@ -1,0 +1,65 @@
+/* ! Unique Elements */
+
+body {
+  background: rgb(15, 15, 15);
+  color: white;
+  user-select: none;
+}
+
+#root {
+  height: 100vh;
+  width: 100%;
+  display: block;
+}
+
+
+
+/* ! SVG Colors */
+
+.cls-1 {fill: var(--accentColor);}
+.cls-2{fill:#fff;}
+.cls-3{fill:#333;}
+.cls-4{fill:none;stroke:#fff;stroke-linejoin:round;stroke-width:41px;}
+
+/* ! Repeating Elements */
+
+/* ! Unified Classes */
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alignLeft {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.alignCenter {
+  align-items: center;
+  text-align: center;
+}
+
+.alignRight {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.largeText {
+  font-size: 35pt;
+}
+
+.Title {
+  margin-top: 10vh;
+  font-weight: 900;
+  margin-left: 10vw;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}

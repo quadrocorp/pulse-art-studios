@@ -1,0 +1,124 @@
+#becomeCreativeSection {
+    margin: 20vh auto 20vh;
+    width: 70%;
+    height: 80vh;
+    position: relative;
+    background: line;
+    border-radius: 8vh;
+    overflow: hidden;
+    padding: 4vw;
+}
+
+#becomeCreativeSection h1 {
+    font-weight: 900;
+}
+
+#becomeCreativeSection svg {
+    height: 6vh;
+    width: fit-content;
+    margin-bottom: 2vh;
+}
+
+#becomeCreativeSection p {
+    margin-top: 2vh;
+    font-size: 15pt;
+}
+
+#becomeCreativeSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, var(--accentColor) 10%, var(--accentColor2));
+    mask-image: url('../additional-stuff/Circle-Pattern.svg');
+    mask-repeat: no-repeat;
+    mask-size: 150%;
+    z-index: -1;
+    filter: opacity(0.6);
+}
+
+.becomeCreativeElement {
+    width: 50vw;
+    height: 100%;
+}
+
+.becomeCreativeElement input[type="text"] {
+    transition: --gradStart 0.5s cubic-bezier(1,-0.03,.11,.98), 
+              --gradEnd 0.5s cubic-bezier(1,-0.03,.11,.98),
+              all .5s cubic-bezier(1, 0, 0, 1);
+    border-radius: 2vh;
+    width: 80%;
+    padding: 2vh 2vw;
+    margin: 2vh;
+    background: linear-gradient(to right, var(--gradStart), var(--gradEnd));
+}
+
+.becomeCreativeElement label b {
+    color: var(--accentColor);
+}
+
+.becomeCreativeElement button {
+    transition: --gradStart 0.5s cubic-bezier(1,-0.03,.11,.98), 
+              --gradEnd 0.5s cubic-bezier(1,-0.03,.11,.98),
+              all .5s cubic-bezier(1, 0, 0, 1);
+    margin-top: 3vh;
+    background: linear-gradient(to right, var(--gradStart), var(--gradEnd));
+    padding: 2vh 4vw;
+    border-radius: 2vh;
+    cursor: pointer;
+}
+
+.becomeCreativeElement input[type='text']:focus {
+    --gradEnd: var(--accentColor2);
+}
+
+.becomeCreativeElement button:hover {
+    --gradEnd: var(--accentColor2);
+    font-weight: 900;
+    letter-spacing: .25vh;
+}
+
+.container {
+   display: block;
+   position: relative;
+   cursor: pointer;
+   padding-left: 2vw;
+ }
+ .container input {
+   position: absolute;
+   opacity: 0;
+   cursor: pointer;
+   height: 2.5vh;
+   width: 2.5vh;
+   top: 0;
+   left: 0;
+ }
+ 
+ .checkmark {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 2.5vh;
+   width: 2.5vh;
+   background-color: hsla(0, 0%, 100%, 0.5);
+   border-radius: 100%;
+ }
+ 
+
+ .container input:hover ~ .checkmark {
+   background-color: #ffffff;
+ }
+ 
+ .container input:checked ~ .checkmark {
+   background-color: var(--accentColor);
+ }
+ 
+ .checkmark:after {
+   content: "";
+   position: absolute;
+   display: none;
+ }
